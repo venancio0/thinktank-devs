@@ -23,6 +23,7 @@ public class AWSConfig {
         AmazonS3ClientBuilder builder = AmazonS3ClientBuilder
                 .standard()
                 .withRegion(awsRegion)
+                .withCredentials(DefaultAWSCredentialsProviderChain.getInstance())
                 .withCredentials(new DefaultAWSCredentialsProviderChain());
 
         // Log informações do builder
