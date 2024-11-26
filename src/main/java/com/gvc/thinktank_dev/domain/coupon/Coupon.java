@@ -29,4 +29,7 @@ public class Coupon {
     @ManyToOne
     @JoinColumn(name = "event_id")
     private Event event;
+
+    public void setEvent(Event event) {
+    }
 }
